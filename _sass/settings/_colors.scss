@@ -1,0 +1,27 @@
+// *----------------------------------*\
+//  Settings > Colors
+// *----------------------------------*/
+
+// Colors
+$color-brand: #0074D5;
+$color-white: #FFFFFF;
+$color-text:  #323232;
+$color-dark:  #000000;
+$color-gray:  #9EA0A6;
+
+// Background Colors
+$bg-gray:                 #F0F6F9;
+$bg-gray-dark:            $color-gray;
+$bg-white:                $color-white;
+$bg-dark:                 $color-dark;
+$bg-dark-opacity:         rgba($color-dark, .3);
+$bg-dark-opacity-lighter: rgba($color-dark, .1);
+
+// Border
+$color-border: #E9EFF3;
+
+// Links
+$color-link: $color-text;
+
+// Shadow
+$text-shadow: 0 1px 1px rgba($color-dark, .25);

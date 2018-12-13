@@ -1,0 +1,12 @@
+/*------------------------------------*\
+  Components > Heading
+\*------------------------------------*/
+
+.c-heading {
+  padding-bottom: $base-spacing-unit;
+  margin-bottom: $base-spacing-unit;
+  border-bottom: 1px solid $color-border;
+  letter-spacing: 2px;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+}

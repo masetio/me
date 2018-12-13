@@ -1,0 +1,24 @@
+<div class='o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--4-4-l js-post-card-wrap'>
+  <div class='c-post-card'>
+
+    <a href='{{ post.url | prepend: site.baseurl }}' class='c-post-card__head'>
+      <h3 class='c-post-card__title'>{{ post.title }}</h3>
+
+      <p class='c-post-card__excerpt'>
+        {{ post.content | strip_html | truncatewords:25 }}
+      </p>
+    </a>
+
+    {% if post.image %}
+      <a href='{{ post.url | prepend: site.baseurl }}' class='js-fadein c-post-card__image' style='background-image: url({{ post.image | prepend: site.baseurl }})'></a>
+    {% endif %}
+
+    <div class='c-post-card__date'>{{ post.date | date: '%d %b %Y' }}</div>
+
+    {% if post.featured %}
+      <span title='Featured Post'>
+        <span class='c-post-card--featured__icon' data-icon='ei-star' data-size='s'></span>
+      </span>
+    {% endif %}
+  </div>
+</div>

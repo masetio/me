@@ -1,0 +1,105 @@
+/*------------------------------------*\
+  Components > Post Card
+\*------------------------------------*/
+
+.c-post-card {
+  position: relative;
+  padding-bottom: double($base-spacing-unit) + $base-spacing-unit;
+  margin-bottom: $base-spacing-unit + half($base-spacing-unit);
+  border-bottom: 1px solid $color-border;
+
+  &__head {
+    display: block;
+
+    @include attention() {
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: half($base-spacing-unit);
+    font-size: $font-size-h4;
+    font-weight: $font-weight-bold;
+    font-family: $font-sans-serif;
+    transition: $global-transition;
+  }
+
+  &__excerpt {
+    margin-bottom: 0;
+    font-size: $font-size-small;
+    font-family: $font-serif;
+    line-height: $line-height-small;
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $bg-gray;
+    margin-top: $base-spacing-unit;
+
+    @include mq($from: tablet) {
+      transition: opacity $global-transition ease-in-out;
+
+      &.js-fadein {
+        opacity: 0;
+      }
+
+      &.is-inview {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      transition: $global-transition;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: $color-dark;
+      opacity: 0;
+    }
+
+    &:after {
+      display: block;
+
+      content: '';
+      width: 100%;
+      padding-bottom: 45%;
+    }
+  }
+
+  &:hover {
+    .c-post-card__image:before {
+      opacity: .1;
+    }
+
+    .c-post-card__head {
+      color: $color-text;
+    }
+
+    .c-post-card__title {
+      color: $color-brand;
+    }
+  }
+
+  &--featured {
+    &__icon {
+      position: absolute;
+      bottom: quarter($base-spacing-unit) + half($base-spacing-unit);
+      right: - half(quarter($base-spacing-unit));
+      fill: $color-gray;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    bottom: quarter($base-spacing-unit) + half($base-spacing-unit);
+    font-size: $font-size-tiny;
+    line-height: half($base-spacing-unit) + $base-spacing-unit;
+    color: $color-gray;
+  }
+}

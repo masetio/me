@@ -1,0 +1,9 @@
+/*------------------------------------*\
+  Components > Footer
+\*------------------------------------*/
+
+.c-footer {
+  padding: half($base-spacing-unit) 0 (half($base-spacing-unit) + quarter($base-spacing-unit));
+  border-top: 1px solid $color-border;
+  color: $color-gray;
+}

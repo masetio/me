@@ -1,0 +1,7 @@
+<div class='c-post-hero' style='background-image: url({{ page.image | prepend: site.baseurl }})'>
+  <div class='c-post-hero__content'>
+    <h2 class='c-post-hero__title'>{{ page.title }}</h2>
+
+    <time class='c-post-hero__date' datetime='{{ page.date | date_to_xmlschema }}'>{{ page.date | date: '%d %b %Y' }}</time>
+  </div>
+</div>

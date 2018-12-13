@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  Components > Tags
+\*------------------------------------*/
+
+.c-tags {
+  a {
+    display: inline-block;
+    padding: quarter($base-spacing-unit) $base-spacing-unit;
+    margin: 0 half($base-spacing-unit) quarter($base-spacing-unit) 0;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    background-color: $bg-gray;
+    transition: $global-transition;
+    color: $color-brand;
+
+    @include mq($until: tablet) {
+      margin-bottom: $base-spacing-unit - half(quarter($base-spacing-unit));
+    }
+
+    @include attention() {
+      color: $color-text;
+      text-decoration: none;
+    }
+  }
+}

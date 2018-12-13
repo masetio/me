@@ -1,0 +1,10 @@
+/*------------------------------------*\
+  Components > Header
+\*------------------------------------*/
+
+.c-header {
+  @include mq($from: desktop) {
+    padding: triple($base-spacing-unit) 0 double($base-spacing-unit);
+    background-color: $bg-white;
+  }
+}

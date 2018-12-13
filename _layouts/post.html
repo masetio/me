@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% assign author = site.authors[page.author] %}
+
+{% if page.image %}
+  <meta itemprop='og:image' content='{{ base_path }}{{ page.image }}'>
+{% endif %}
+
+<div class='o-grid o-grid--full'>
+  <div class='o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--2-4-l'>
+    {% include post-hero.html %}
+  </div>
+
+  <div class='o-grid__col o-grid__col--center o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l'>
+    <div class='o-main'>
+      {% include header.html %}
+
+      <div class='o-main__content'>
+        <article class='{{ post_class }}'>
+
+          <div class='c-content'>
+            {{ content }}
+          </div>
+
+          <div class='c-tags'>
+            {% for tag in page.tags %}
+              <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag }}</a>
+            {% endfor %}
+          </div>
+
+          <div class='o-grid'>
+            <div class='o-grid__col o-grid__col--full'>
+              <hr>
+              {% include share.html %}
+            </div>
+          </div>
+
+          <hr>
+
+          {% include subscribe-form.html %}
+
+          {% if page.author %}
+            {% include author.html %}
+          {% endif %}
+
+        </article>
+
+        {% include disqus.html %}
+
+      </div>
+
+      {% include footer.html %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+/*------------------------------------*\
+  Components > Search
+\*------------------------------------*/
+
+.c-search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: index($stack-elements, search);
+  padding-top: double($base-spacing-unit);
+  background: $bg-white;
+  transform: translate3d(100%, 0, 0);
+  -webkit-perspective: 1000;
+  transition: transform half($global-transition) ease-out;
+
+  @include mq($from: desktop) {
+    left: 50%;
+  }
+
+  @include mq($from: tablet) {
+    padding-top: quadruple($base-spacing-unit);
+  }
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: half($base-spacing-unit) + quarter($base-spacing-unit);
+    left: - quarter($base-spacing-unit);
+    fill: $color-gray;
+
+    @include mq($until: tablet) {
+      width: double($base-spacing-unit);
+    }
+  }
+
+  &__input[type='search'] {
+    padding: 0;
+    width: 100%;
+    outline: none;
+    padding-left: double($base-spacing-unit);
+    padding-bottom: half($base-spacing-unit);
+    margin-bottom: $base-spacing-unit;
+
+    font-weight: $font-weight-light;
+    font-size: double($font-size-small);
+    line-height: double($line-height-small);
+
+    border: 0;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__close {
+    position: absolute;
+    top: $base-spacing-unit;
+    right: $base-spacing-unit;
+
+    cursor: pointer;
+    fill: $color-text;
+    transition: $global-transition;
+
+    @include mq($from: tablet) {
+      top: double($base-spacing-unit);
+      right: double($base-spacing-unit);
+    }
+
+    &:hover {
+      fill: $color-gray;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.c-search-result {
+  display: none;
+  height: 80vh;
+  overflow: auto;
+  white-space: normal;
+  padding-right: double($base-spacing-unit);
+
+  &__head {
+    padding-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+    font-size: $font-size-medium;
+    color: $color-gray;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__item {
+    padding-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__title {
+    display: block;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-medium;
+
+    @include attention() {
+      color: $color-brand;
+      text-decoration: none;
+    }
+  }
+}

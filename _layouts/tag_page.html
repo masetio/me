@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class='o-grid o-grid--full'>
+  <div class='o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--2-4-l'>
+    {% include tag-hero.html %}
+  </div>
+
+  <div class='o-grid__col--center o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l'>
+    <div class='o-main'>
+      {% include header.html %}
+
+      <div class='o-main__content'>
+        <div class='o-grid js-grid'>
+          {% for post in page.posts %}
+            {% include post-card.html %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {% include footer.html %}
+    </div>
+  </div>
+</div>

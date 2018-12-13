@@ -1,0 +1,19 @@
+<ul class='c-nav o-plain-list'>
+  <li class='c-nav__item'>
+    <a href='{{ site.baseurl }}/' class='c-nav__link'>Home</a>
+  </li>
+  {% for page in site.pages %}
+    {% unless page.name == '404.md' %}
+      {% if page.title %}
+        <li class='c-nav__item'>
+          <a class='c-nav__link' href='{{ page.url | prepend: site.baseurl }}'>{{ page.title }}</a>
+        </li>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+  <li class='c-nav__item c-nav__item--search'>
+    <a class='js-search-toggle' href='#'>
+      <span class='c-nav__icon' data-icon='ei-search' data-size='s'></span>
+    </a>
+  </li>
+</ul>

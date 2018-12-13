@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  Objects > Main
+\*------------------------------------*/
+
+.o-main {
+  margin: 0 auto;
+  padding: double($base-spacing-unit) $base-spacing-unit;
+
+  @include mq($from: desktop) {
+    max-width: 650px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 double($base-spacing-unit);
+  }
+
+  @include mq($from: desktop) {
+    &__content {
+      flex: 1 0 auto;
+    }
+  }
+}

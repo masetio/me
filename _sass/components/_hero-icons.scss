@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  Components > Home Icons
+\*------------------------------------*/
+
+.c-hero-icons {
+  position: absolute;
+  z-index: index($stack-elements, hero-element);
+  top: $base-spacing-unit;
+  right: $base-spacing-unit;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: half($base-spacing-unit);
+    }
+  }
+
+  @include mq($from: tablet) {
+    top: half($base-spacing-unit) + $base-spacing-unit;
+    right: half($base-spacing-unit) + $base-spacing-unit;
+  }
+
+  @include mq($from: desktop) {
+    display: none;
+  }
+
+  &__icon {
+    fill: $color-white;
+  }
+}

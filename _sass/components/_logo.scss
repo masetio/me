@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  Components > Logo
+\*------------------------------------*/
+
+.c-logo {
+  margin-bottom: half($base-spacing-unit);
+
+  @include mq($from: desktop) {
+    text-align: center;
+    margin-bottom: $base-spacing-unit;
+  }
+
+  &__link {
+    display: block;
+    font-weight: $font-weight-light;
+
+    @include mq($from: desktop) {
+      font-size: $font-size-h2;
+    }
+
+    @include attention() {
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    max-height: double($base-spacing-unit);
+  }
+}

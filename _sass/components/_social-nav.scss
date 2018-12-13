@@ -1,0 +1,21 @@
+/*------------------------------------*\
+  Components > Social Navigation
+\*------------------------------------*/
+
+.c-social-nav {
+  &__item {
+    display: inline-block;
+  }
+
+  &__icon {
+    fill: $color-text;
+    fill: $color-gray;
+    vertical-align: middle;
+    transition: $global-transition;
+
+    @include attention() {
+      fill: $color-gray;
+      fill: $color-text;
+    }
+  }
+}
