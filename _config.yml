@@ -11,10 +11,10 @@ logo:               # Logo image URL
 cover_image:        'http://dahab.aspirethemes.com/content/images/2017/08/sarah-dorweiler-123483-1-1.jpg'
 description:        "<h2>Thoughts, Stories and Ideas.</h2><p>Don't cry because it's over, smile because it happened.<br>- <a href='https://en.wikipedia.org/wiki/Dr._Seuss'>Dr. Seuss</a></p>"
 baseurl:            '' # The subpath of your site, e.g. /blog
-url:                'http://dahab-jekyll.aspirethemes.com' # The base hostname & protocol for your site
-twitter:            https://twitter.com/aspirethemes
-facebook:           https://www.facebook.com/aspirethemes/
-instagram:          https://www.instagram.com/aspirethemes
+url:                'http://masetio.web.id' # The base hostname & protocol for your site
+twitter:            https://twitter.com/masetio
+facebook:           https://www.facebook.com/masetio/
+instagram:          https://www.instagram.com/masetio
 
 markdown:  kramdown
 permalink: pretty
